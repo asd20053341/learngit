@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bsk.update.view.InstallPackage xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="640dp"
+    android:layout_height="480dp"
+    android:orientation="vertical" >
+<!-- com.bsk.update.view.InstallPackage
+ android:layout_width="640dp"
+    android:layout_height="480dp" -->
+    <TextView
+        android:id="@+id/descriptor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:shadowColor="@android:color/darker_gray"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:text="@string/install_ota_help"
+        android:textColor="@android:color/black"
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!--android:layout_width="640dp"最坏的就是它，它的宽度限制了640dp，所以其他控件无论怎么改，都没变化，因为其他控件都是跟它对齐  -->
+        <ProgressBar
+            android:id="@+id/verify_progress"
+            style="?android:attr/progressBarStyleHorizontal"           
+            android:layout_width="640dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp" />
+
+        <LinearLayout
+            android:id="@+id/output_field"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_alignLeft="@+id/verify_progress"
+            android:layout_alignRight="@+id/verify_progress"
+            android:layout_below="@+id/verify_progress"
+            android:layout_marginTop="14dp"
+         	android:background="@drawable/block_drawable_white" 
+            android:orientation="vertical" >
+        </LinearLayout>
+        <!--   -->
+
+        <Button
+            android:id="@+id/confirm_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/output_field"
+            android:layout_below="@+id/output_field"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/update_btn_bg"
+            android:textColor="@android:color/white"
+            android:text="@string/confirm_update"
+            android:textSize="28sp" />
+
+         <Button
+            android:id="@+id/confirm_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/output_field"
+            android:layout_below="@+id/output_field"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/update_cancel_bg"
+            android:textColor="#00ff00"
+            android:text="@string/confirm_cancel" 
+            android:textSize="28sp"/>
+        
+    </RelativeLayout>
+
+</com.bsk.update.view.InstallPackage>

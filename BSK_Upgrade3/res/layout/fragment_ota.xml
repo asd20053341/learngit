@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_marginTop="32dp" >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/version_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/logo"
+                android:singleLine="true"
+                android:text="LAORENPAD 1.0"
+                android:textColor="#000000"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/version_tv"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/logo"
+                android:text="亲情相框"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tip"
+            android:textColor="#BEBEBE"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/download_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/download_precent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="100%"
+            android:textSize="22sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/version_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="版本描述:"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/version_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="12"
+            android:scrollbars="vertical"
+            android:text="1.修正了一个不能下载数据包的BUG;\n2.修复了XAPK Validation Failed错误;\n3.修正了在SamsungS2上闪退的问题;\n4.其他BUG的修复 ;"
+            android:textColor="#333333"
+            android:textSize="22sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="36dp"
+            android:layout_marginTop="36dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/local_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:background="@drawable/bg_local"
+                    android:padding="10dp"
+                    android:text="本地升级"
+                    android:textColor="#00ff00"
+                    android:textSize="32sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/check_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:background="@drawable/bg_check"
+                    android:padding="10dp"
+                    android:text="在线检测"
+                    android:textColor="#ffffff"
+                    android:textSize="32sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

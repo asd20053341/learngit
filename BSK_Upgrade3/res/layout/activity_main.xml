@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top_ly"
+        android:layout_width="match_parent"
+        android:layout_height="241dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/tbg"
+        >
+        
+        <TextView 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentTop="true"
+        	android:layout_alignParentRight="true"
+        	android:layout_marginTop="128dp"
+        	android:layout_marginRight="244dp"
+        	android:text="V1.0"
+        	android:textSize="32sp"
+			android:textColor="#ffffff"	        	
+            />
+        
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:orientation="horizontal"
+	        >
+        
+        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	        	android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:gravity="center"
+	            android:layout_weight="1"
+	            >
+	            
+	            <Button
+	             	android:id="@+id/ota_btn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="#00000000"
+		            android:text="系统升级"
+		            android:textSize="28sp"
+		            android:textColor="#ffffff"
+		            android:onClick="selectFrag" />
+	            
+	            <ImageView 
+	                android:id="@+id/ltab_iv"
+	             	android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingTop="2dp"
+		            android:background="#00000000"
+		            android:src="@drawable/tab"
+	                />
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	        	android:layout_height="wrap_content"
+	        	android:layout_weight="1"
+	            android:orientation="vertical"
+	            android:gravity="center"
+	            >
+	            
+	            <Button
+	             	android:id="@+id/app_btn"
+	             	android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="#00000000"
+		            android:text="应用升级"
+		            android:textSize="28sp"
+		            android:textColor="#ffffff"
+		            android:onClick="selectFrag" />
+	            
+	            <ImageView 
+	                android:id="@+id/rtab_iv"
+	             	android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="#00000000"
+		            android:paddingTop="2dp"
+		            android:src="@drawable/tab"
+		            android:visibility="invisible"
+	                />
+	            
+	        </LinearLayout>
+        
+        </LinearLayout>
+        
+        
+    </RelativeLayout>
+    
+    
+    
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_ly"
+        android:background="#ffffff" />
+
+</RelativeLayout>
+
+
+    

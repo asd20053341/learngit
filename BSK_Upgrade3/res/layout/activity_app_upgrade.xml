@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bsk.update1.MainActivity$PlaceholderFragment" >
+
+    	<RelativeLayout 
+    	    android:id="@+id/top_ly"
+    	    android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:background="#000066"
+    	    >
+    	    
+    	    <TextView
+	            android:id="@+id/title_tv"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerInParent="true"
+		        android:text="应用升级"
+		         />
+    	    
+    	    
+    	    
+    	    <Button
+	            android:id="@+id/all_upgrade_btn"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:text="全部升级"
+		         />
+    	    
+    	    <Button
+	            android:id="@+id/check_app_btn"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_toLeftOf="@id/all_upgrade_btn"
+		        android:text="检查更新"
+		         />
+    	    
+    	</RelativeLayout>	
+    	
+    	
+    	<ListView
+			android:id="@+id/app_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@id/top_ly"
+			android:layout_gravity="center"
+			android:background="#ffffff"/>
+        
+        
+
+</RelativeLayout>
